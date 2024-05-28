@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1>Create new Sport event</h1>
+<form action="" method="post">{% csrf_token %}
+  {{ form|crispy }}
+  <button class="btn btn-success ml-2 bg-dark" type="submit">Save</button>
+</form>
+{% endblock content %}

@@ -1,9 +1,22 @@
 {% extends 'base.html' %}
 
-{%block title%}Main Page{%endblock%}
+{%block title%}Home Page{%endblock%}
 
 {% block content %}
-<h1>Main Page</h1>
-{% endblock %}
+{% if user.is_authenticated %}
+    <div class="text-center">
+        <h1>Welcome, {{ user.username }}!</h1>
+        <a href="{% url 'show_all_events' %}" class="btn btn-primary btn-lg bg-dark">See All Events</a>
+    </div>
+    
+{% else %}
+<p>You are not logged in yet. Please log in to see your sport events.</p>
+
+{% endif %}
+
+{% endblock content %}
+
+
+
 ```
 
