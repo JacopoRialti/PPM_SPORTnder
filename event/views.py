@@ -31,7 +31,7 @@ def show_events(request):
 @login_required
 def show_all_events(request):
     all_events = Event.objects.annotate(num_registered_users=Count('registered_users')).filter(num_registered_users__lt=F('n_participants')).order_by('start_date')
-    return render(request, 'show_all_events.html', {'all_events': all_events})
+    return render(request, 'show_all_events.html', {'all_events': all_events, 'user': request.user})
 
 
 @login_required
