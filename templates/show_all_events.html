@@ -10,7 +10,7 @@
                 <div class="card justify-content-center m-1" style="background-color:  {% if user in event.registered_users.all %}lightblue{% else %} inherent{% endif %}">
                     <div class="card-header">
                         <span class="fw-bold">
-                            <a href="">{{ event.title }}</a>
+                            <a href="{% url 'event_detail' event.id %}">{{ event.title }}</a>
                         </span> 
                         <span class="text-muted">by {{ event.organizer }} | {{ event.start_date }}</span>
                     </div>

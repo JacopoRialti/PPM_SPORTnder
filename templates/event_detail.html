@@ -12,10 +12,15 @@
                     <p class="card-text">Description: {{ event.description }}</p>
                     <p class="card-text text-muted">Number of Participants: {{ event.n_participants }}</p>
                     <p class="card-text text-muted">Remaining Slots: {{ event.remaining_slots }}</p>
-                    {% if request.user not in event.registered_users.all%}
-                            <a href="{% url 'register_event' event.id %}" class="btn btn-primary">Register</a>
+                
+                    {% if request.user not in event.registered_users.all %}
+                        <a href="{% url 'register_event' event.id %}" class="btn btn-primary bg-dark">Register</a>
                     {% else %}
-                    <p class="card-footer text-muted">You are already registered in this event.</p>
+                        <p class="card-footer text-muted my-1 border-dark">You are already registered in this event.</p>
+                        <a href="{% url 'unregister_event' event.id %}" class="btn btn-primary bg-dark">Unregister</a>
+                    {% endif %}
+                    {% if request.user == event.organizer %}
+                        <a href="{% url 'edit_event' event.id %}" class="btn btn-primary bg-dark">Edit</a>
                     {% endif %}
                 </div>
             </div>

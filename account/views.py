@@ -64,3 +64,14 @@ def register_event(request, event_id):
         return redirect('event_detail', event_id=event.id)
 
 
+@login_required
+def unregister_event(request, event_id):
+    event = get_object_or_404(Event, id=event_id)
+    if request.user not in event.registered_users.all():
+        messages.error(request, 'You are not registered for this event.')
+        return redirect('event_detail', event_id=event.id)
+    else:
+        event.registered_users.remove(request.user)
+        event.save()
+        messages.success(request, 'You have successfully unregistered for the event.')
+        return redirect('event_detail', event_id=event.id)
