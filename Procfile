@@ -1,0 +1,1 @@
+web: gunicorn PPM_BE_EMS.wsgi:application

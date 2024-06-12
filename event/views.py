@@ -46,7 +46,11 @@ def show_all_events(request):
 def event_detail(request, event_id):
     event = get_object_or_404(Event, id=event_id)
     event.remaining_slots = event.n_participants - event.registered_users.count()
-    return render(request, 'event_detail.html', {'event': event})
+    context = {
+        'event': event,
+        'registered_users': event.registered_users.all()
+    }
+    return render(request, 'event_detail.html', context)
 
 
 @login_required

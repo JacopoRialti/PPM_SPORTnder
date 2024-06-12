@@ -12,7 +12,16 @@
                     <p class="card-text">Description: {{ event.description }}</p>
                     <p class="card-text text-muted">Number of Participants: {{ event.n_participants }}</p>
                     <p class="card-text text-muted">Remaining Slots: {{ event.remaining_slots }}</p>
-                
+                    <p class="card-text text-muted">Registered Users:</p>
+                    <ul>
+                        {% if registered_users %}
+                            {% for user in registered_users %}
+                                <li>{{ user.username }}</li>
+                            {% endfor %}
+                        {% else %}
+                            <li>No users registered for this event yet.</li>
+                        {% endif %}
+                    </ul>
                     {% if request.user not in event.registered_users.all %}
                         <a href="{% url 'register_event' event.id %}" class="btn btn-primary bg-dark">Register</a>
                     {% else %}
