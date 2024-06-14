@@ -1,1 +1,1 @@
-web: gunicorn PPM_BE_EMS.wsgi:application
+web: python manage.py makemigrations && python manage.py migrate && python manage.py collectstatic --noinput && gunicorn PPM_BE_EMS.wsgi --log-file -
