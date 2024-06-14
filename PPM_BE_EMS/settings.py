@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
     # 3rd Party
     "crispy_forms",  # new for better form visualization
+    "crispy_bootstrap5",  # new add bootstrap5 to crispy forms
     "django_user_agents",  # new app to handle user agents data with a middleware
 
 
