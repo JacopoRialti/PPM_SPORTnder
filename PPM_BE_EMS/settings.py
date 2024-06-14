@@ -28,10 +28,10 @@ DEBUG = os.environ.get('DJANGO_DEBUG', default='') != 'False'
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    "SPORTnder-production.up.railway.app",]
+    "sportnder-production.up.railway.app",]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://SPORTnder-production.up.railway.app",
+    "https://sportnder-production.up.railway.app",
 ]
 
 # Application definition
