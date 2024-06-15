@@ -2,7 +2,7 @@
 
 Applicazione web back-end, sviluppata utilizzando _Python_ e il framework _Django_, consente a tutti gli utenti registrati di creare, gestire e partecipare a eventi sportivi. \
 
-l'applicazione la potete trovare al seguente link: <a href="ppmbeems-production.up.railway.app" target="_blank">SPORTnder</a>.  
+l'applicazione la potete trovare al seguente link: <a href="https://ppmbeems-production.up.railway.app/" target="_blank">SPORTnder</a>.  
 
 Nella HomePage è presente un messaggio di benvenuto per l'utente se loggato e un pulsante chiamato _See all events_ che permette di visualizzare tutti gli eventi presenti nel database che hanno la data di inizio maggiore o uguale alla data corrente.
 
