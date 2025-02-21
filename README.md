@@ -55,6 +55,8 @@ In fondo alla pagina è presente una lista degli utenti iscritti all'evento con 
 
 SPORTnder è un'applicazione web back-end sviluppata utilizzando Python e il framework Django. Fornisce una piattaforma per gli utenti per creare, gestire e partecipare a eventi sportivi. L'applicazione offre un'interfaccia user-friendly con funzionalità come la creazione di eventi, la registrazione agli eventi e una visualizzazione personalizzata degli eventi dell'utente.
 
+Back-End project for "Progettazione e Produzione Multimediale" at UNIFI.
+
 ## Disclaimer
 
 Questa applicazione è sviluppata a scopo didattico e non è destinata all'uso nel mondo reale. Gli sviluppatori di questa applicazione non sono responsabili per eventuali abusi o per eventuali danni o perdite subiti. Tutti i dati utilizzati o creati da questa applicazione devono essere considerati non confidenziali e non proprietari. Gli utenti sono responsabili di garantire che qualsiasi dato inserito nell'applicazione sia conforme a tutte le leggi e i regolamenti applicabili.
